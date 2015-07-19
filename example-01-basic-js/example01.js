@@ -64,4 +64,5 @@ site.add( dynamicResource );
 var appSrv = site.serve();
 
 // Listen
+console.log('Server listening on port 3030');
 appSrv.listen(3030);
