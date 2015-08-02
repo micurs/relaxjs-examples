@@ -6,31 +6,25 @@ var r = require('relaxjs');
 var site = r.site('Example #01');
 
 site.add(  {
-  name: 'Page1',
+  name: 'hello',
   view: 'helloworld',
   data: { message: "Hello World!" }
 });
 
 site.add( {
-  name: 'Page2',
-  view: 'helloworld',
-  data: { message: "Asta la vista!" }
-});
-
-site.add( {
-  name: 'ContainerPage',
+  name: 'greetings',
   view: 'helloworld',
   data: { message: "This is a resource with child resources" },
   resources: [
     {
-      name: 'Child1',
+      name: 'zh',
       view: 'helloworld',
-      data: { message: "Hello! This is child #1 !" }
+      data: { message: "你好世界" }
     },
     {
-      name: 'Child2',
+      name: 'en',
       view: 'helloworld',
-      data: { message: "Hello! This is child #2 !" }
+      data: { message: "Hello World!" }
     }
   ]
 });

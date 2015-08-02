@@ -96,4 +96,5 @@ mysite.add( usersResource );
 var appSrv = mysite.serve();
 
 // And serve it
-appSrv.listen(3000);
+console.log('Server listening on port 3030');
+appSrv.listen(3030);
