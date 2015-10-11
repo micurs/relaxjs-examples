@@ -5,8 +5,7 @@
     "declaration": false,
     "noImplicitAny": false,
     "removeComments": false,
-    "noLib": false,
-    "sourceMaps": true
+    "noLib": false
   },
   "files": [ "example02.ts" ]  
 }
