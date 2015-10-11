@@ -17,7 +17,7 @@ npm start
 
 The data served by this mini-app is a list of users. If you go to the root resource with your browser you should get this page:
 
-[screen1]: https://github.com/micurs/micurs.com/blob/master/sample02/example2.png "Site home page for Example #2"
+[screen1]: ./example02.png "Site home page for Example #2"
 
 ![alt text][screen1]
 
