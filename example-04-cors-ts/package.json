@@ -1,0 +1,17 @@
+{
+  "name": "example-04-cors-ts",
+  "version": "1.0.0",
+  "description": "How to enable CORS with relaxjs",
+  "main": "dist/server.js",
+  "scripts": {
+    "start": "node dist/server.js | bunyan",
+    "build": "tsc -p .",
+    "client": "http-server -p 3000 -o http://localhost:3000/index.html"
+  },
+  "author": "Michele Ursino",
+  "license": "MIT",
+  "dependencies": {
+    "http-server": "^0.8.5",
+    "relaxjs": "file:///Users/Michele/dev/opensource/relaxjs"
+  }
+}

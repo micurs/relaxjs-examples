@@ -1,0 +1,26 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Run example04",
+			"type": "node",
+      "request": "launch",
+			"program": "${workspaceRoot}/dist/server.js",
+			"stopOnEntry": false,
+			"args": [],
+			"cwd": "${workspaceRoot}",
+			"runtimeExecutable": null,
+			"runtimeArgs": [ "--nolazy" , "--debug-brk"],
+			"env": { },
+			"sourceMaps": true,
+      "externalConsole": true,
+      "outDir": "${workspaceRoot}/dist"
+		},
+		{
+			"name": "Attach",
+			"type": "node",
+			"port": 5858,
+      "request": "attach"
+		}
+	]
+}

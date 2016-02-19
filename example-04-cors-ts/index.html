@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script lang="javascript" src="https://code.jquery.com/jquery-2.2.0.min.js" ></script>
+  </head>
+  <body>
+    <h2>Client app making CORS request to localhost:5000/simple</h2>
+    <p>
+      <button id="getCallBt">Call GET </button>
+      &nbsp;
+      <button id="postCallBt">Call POST </button>
+      &nbsp;
+      <button id="patchCallBt">Call PATCH </button>
+      &nbsp;
+      <button id="delCallBt">Call PATCH </button>
+    </p>
+    <pre id="result"></pre>
+    <script lang="javascript">
+      $(function() {
+
+        // PATCH click
+        $('#patchCallBt').click( function() {
+          var data = { message: 'This is data sent via PATCH to a remote server' };
+          $('#result').text( 'sending PATCH request ...' );
+          $.ajax({
+            url: 'http://localhost:5000/simple',
+            cache: false,
+            type: 'PATCH',
+            headers: { Accept: 'application/json; charset=utf-8' },
+            data: data
+          })
+          .done( function(data) {
+            $('#result').text( JSON.stringify(data, null, '  ') );
+          })
+          .fail( function(jqXHR) {
+            var msg = 'Remote call request failed.';
+            if ( jqXHR.responseJSON ) {
+              msg = msg+' '+jqXHR.responseJSON.error;
+            }
+            $('#result').text( msg );
+          });
+        });
+
+        // POST click
+        $('#postCallBt').click( function() {
+          var data = { message: 'This is data sent via POST to a remote server' };
+          $('#result').text( 'sending POST request ...' );
+          $.ajax({
+            url: 'http://localhost:5000/simple',
+            cache: false,
+            type: 'POST',
+            headers: { Accept: 'application/json; charset=utf-8' },
+            data: data
+          })
+          .done( function(data) {
+            $('#result').text( JSON.stringify(data, null, '  ') );
+          })
+          .fail( function(jqXHR) {
+            var msg = 'Remote call request failed.';
+            if ( jqXHR.responseJSON ) {
+              msg = msg+' '+jqXHR.responseJSON.error;
+            }
+            $('#result').text( msg );
+          });
+        });
+
+        // GET click
+        $('#getCallBt').click( function() {
+          $('#result').text( 'sending GET request ...' );
+          $.ajax({ url: 'http://localhost:5000/simple', cache: false, type: 'GET', headers: { Accept: 'application/json; charset=utf-8' } })
+          .done( function(data) {
+            $('#result').text( JSON.stringify(data, null, '  ') );
+          })
+          .fail( function(jqXHR) {
+            var msg = 'Remote call request failed.';
+            if ( jqXHR.responseJSON ) {
+              msg = msg+' '+jqXHR.responseJSON.error;
+            }
+            $('#result').text( msg );
+          });
+        });
+
+        // DELETE click
+        $('#delCallBt').click( function() {
+          $('#result').text( 'sending DELETE request ...' );
+          $.ajax({ url: 'http://localhost:5000/simple', cache: false, type: 'DELETE', headers: { Accept: 'application/json; charset=utf-8' } })
+          .done( function(data) {
+            $('#result').text( JSON.stringify(data, null, '  ') );
+          })
+          .fail( function(jqXHR) {
+            var msg = 'Remote call request failed.';
+            if ( jqXHR.responseJSON ) {
+              msg = msg+' '+jqXHR.responseJSON.error;
+            }
+            $('#result').text( msg );
+          });
+        });
+
+
+      });
+    </script>
+  </body>
+</html>
