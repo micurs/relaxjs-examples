@@ -12,6 +12,6 @@
     "debug": "node-debug binary.js"
   },
   "dependencies": {
-    "relaxjs": "file:..\\..\\relaxjs"
+    "relaxjs": "git://github.com/micurs/relaxjs.git"
   }
 }

@@ -1,5 +1,8 @@
 ///<reference path='./node_modules/relaxjs/dist/relaxjs.d.ts' />
+///<reference path="typings/node/node.d.ts" />
 
+
+import http = require("http");
 import fs = require('fs');
 import relax = require('relaxjs');
 

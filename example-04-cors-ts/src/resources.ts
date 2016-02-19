@@ -8,25 +8,21 @@ export var simpleResource : relax.Resource = {
   outFormat: 'application/json',
 
   onGet: function( query: any, respond: relax.Response )  {
-    this.headers = { 'Access-Control-Allow-Origin': '*' } ;
     this.data = { myData: "example data" };
     respond.ok();
   },
 
   onPost: function( query: any, data: any, respond: relax.Response )  {
-    this.headers = { 'Access-Control-Allow-Origin': '*' } ;
     this.data = { yourData: data };
     respond.ok();
   },
 
   onPatch: function( query: any, data: any, respond: relax.Response )  {
-    this.headers = { 'Access-Control-Allow-Origin': '*' } ;
     this.data = { yourData: data };
     respond.ok();
   },
 
   onDelete: function( query: any, respond: relax.Response )  {
-    this.headers = { 'Access-Control-Allow-Origin': '*' } ;
     this.data = { yourData: 'have been deleted' };
     respond.ok();
   }
