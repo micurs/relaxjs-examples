@@ -10,6 +10,6 @@
     "debug": "node-debug example01.js"
   },
   "dependencies": {
-    "relaxjs": "git://github.com/micurs/relaxjs.git"
+    "relaxjs": "^0.2.2"
   }
 }

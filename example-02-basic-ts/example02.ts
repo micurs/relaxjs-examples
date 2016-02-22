@@ -1,11 +1,12 @@
 // relaxjs example #2 - part of relaxjs v 0.1.4
 // by Michele Ursino
 
+/// <reference path='./typings/node/node.d.ts' />
 /// <reference path='./node_modules/relaxjs/dist/relaxjs.d.ts' />
 
-import relaxjs = require('relaxjs');
+import * as relaxjs from 'relaxjs';
 
-var jsonformat : string = 'application/json'; 
+var jsonformat : string = 'application/json';
 
 var marystewart : relaxjs.Resource = {
   name: 'mary-stewart',
@@ -14,10 +15,10 @@ var marystewart : relaxjs.Resource = {
     this.data =  { firstName: 'Mary', lastName: 'Stewart' };
     respond.ok();
   },
-  resources: [ { 
+  resources: [ {
       name: 'address',
       outFormat : jsonformat,
-      data: { address: '101 John St. San Francisco CA. ' } 
+      data: { address: '101 John St. San Francisco CA. ' }
     }
   ]
 }
@@ -26,12 +27,12 @@ var joedoe : relaxjs.Resource = {
   name: 'joe-doe',
   outFormat : jsonformat,
   data: { firstName: 'Joe', lastName: 'Doe' },
-  resources: [ { 
+  resources: [ {
       name: 'address',
       outFormat : jsonformat,
-      data: { 
+      data: {
         address: '458 5th Avenue New York NY. '
-      } 
+      }
     }
   ]
 };
@@ -40,34 +41,34 @@ var johnsmith : relaxjs.Resource = {
   name: 'john-smith',
   outFormat : jsonformat,
   onGet: function( q, respond: relaxjs.Response ) {
-    this.data = { 
-      firstName: 'John', 
+    this.data = {
+      firstName: 'John',
       lastName: 'Smith',
       address: this.resources.address[0].data,
-      phone: this.resources.phone[0].data 
+      phone: this.resources.phone[0].data
     };
     respond.ok();
   },
-  resources: [ { 
-      name: 'address', 
-      outFormat : jsonformat, 
-      data: { 
-        value: '33 Pearl St. Los Angeles CA.' 
-      } 
+  resources: [ {
+      name: 'address',
+      outFormat : jsonformat,
+      data: {
+        value: '33 Pearl St. Los Angeles CA.'
+      }
     },
-    { 
-      name: 'phone', 
-      outFormat : jsonformat, 
-      data: { 
-        value: '123.456.7890' 
-      } 
+    {
+      name: 'phone',
+      outFormat : jsonformat,
+      data: {
+        value: '123.456.7890'
+      }
     },
-    { 
-      name: 'phone', 
-      outFormat : jsonformat, 
-      data: { 
-        value: '456.456.7890' 
-      } 
+    {
+      name: 'phone',
+      outFormat : jsonformat,
+      data: {
+        value: '456.456.7890'
+      }
     }
   ]
 };

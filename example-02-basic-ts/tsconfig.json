@@ -2,10 +2,9 @@
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
-    "declaration": false,
-    "noImplicitAny": false,
     "removeComments": false,
-    "noLib": false
+    "moduleResolution": "node",
+    "sourceMap": true
   },
-  "files": [ "example02.ts" ]  
+  "files": [ "example02.ts" ]
 }

@@ -6,7 +6,7 @@
   "author": "Michele Ursino",
   "license": "MIT",
   "scripts": {
-    "build": "tsc -m commonjs -t ES5 binary.ts",
+    "build": "tsc -p .",
     "typings": "tsd reinstall --save --overwrite",
     "start": "node binary.js --relaxjs-verbose | bunyan",
     "debug": "node-debug binary.js"
