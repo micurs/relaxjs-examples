@@ -12,6 +12,6 @@
   "license": "MIT",
   "dependencies": {
     "http-server": "^0.8.5",
-    "relaxjs": "git://github.com/micurs/relaxjs.git"
+    "relaxjs": "^0.2.5"
   }
 }

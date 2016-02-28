@@ -1,4 +1,4 @@
-///<reference path='../node_modules/relaxjs/dist/relaxjs.d.ts' />
+/// <reference path='../node_modules/relaxjs/dist/relaxjs.d.ts' />
 
 import * as relax from 'relaxjs';
 
@@ -8,6 +8,7 @@ export var simpleResource : relax.Resource = {
   outFormat: 'application/json',
 
   onGet: function( query: any, respond: relax.Response )  {
+    this.headers = { 'Cache-Control' : 'no-cache, max-age=0, must-revalidate, no-store'};
     this.data = { myData: "example data" };
     respond.ok();
   },
