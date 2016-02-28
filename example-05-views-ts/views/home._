@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <title><%= data.title %></title>
+  </head>
+  <body>
+      <h1><%= data.title %></h1>
+      <p>relaxjs uses <a target="_blank" href="https://lodash.com/docs#template">lodash template</a> utility to merge a resource data object with a html template</p>
+      <p>Views are located in the 'views' directory and have <code>._</code> extensions.</p>
+      <p>Views are compiled at runtime, so you don't need to restart the server everytime you change a view.</p>
+      <p>Naturally the data object merged into a view can be static (as in this example) or dynamic.</p>
+      <hr/>
+      <h2>We can also nest a view inside a container layout</h2>
+      <p>Check <a href="<%= data.link %>">this page</a> to see an example.</p>
+  </body>
+</html>

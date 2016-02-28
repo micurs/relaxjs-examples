@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <title><%= data.title %></title>
+  </head>
+  <body>
+      <h1>Master Layout</h1>
+      <p>A resource can reference a view through a master layout</p>
+      <p>The content below the line is the actual content of this resource</p>
+      <hr/>
+      <%= page %>
+  </body>
+</html>

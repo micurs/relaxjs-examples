@@ -1,0 +1,3 @@
+<p>This is the actual view result for the view with layout</p>
+<h2><%= data.title %></h2>
+<p><%= data.content %></p>

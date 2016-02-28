@@ -10,6 +10,6 @@
     "debug": "node-debug example01.js"
   },
   "dependencies": {
-    "relaxjs": "^0.2.2"
+    "relaxjs": "^0.2.5"
   }
 }

@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "removeComments": false,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "listFiles": false
+  },
+  "files": [ "example05.ts" ]
+}

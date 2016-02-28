@@ -1,0 +1,23 @@
+{
+  "name": "example05",
+  "version": "0.2.5",
+  "description": "Simple use of views in a relaxjs server",
+  "main": "example05.js",
+  "scripts": {
+    "build": "tsc -p .",
+    "start": "node example05.js --relaxjs-verbose"
+  },
+  "keywords": [
+    "relaxjs",
+    "node"
+  ],
+  "author": "Michele Ursino",
+  "license": "MIT",
+  "dependencies": {
+    "relaxjs": "^0.2.5"
+  },
+  "devDependencies": {
+    "tslint": "^3.5.0",
+    "typescript": "^1.8.2"
+  }
+}
