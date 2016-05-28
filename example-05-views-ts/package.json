@@ -17,7 +17,7 @@
     "relaxjs": "^0.2.5"
   },
   "devDependencies": {
-    "tslint": "^3.5.0",
-    "typescript": "^1.8.2"
+    "tslint": "^3.10.2",
+    "typescript": "^1.8.10"
   }
 }

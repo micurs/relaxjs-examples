@@ -2,7 +2,7 @@
   "name": "Binary",
   "version": "0.2.0",
   "description": "Delivering binary data",
-  "main": "bninary.js",
+  "main": "binary.js",
   "author": "Michele Ursino",
   "license": "MIT",
   "scripts": {
@@ -12,6 +12,6 @@
     "debug": "node-debug binary.js"
   },
   "dependencies": {
-    "relaxjs": "^0.2.5"
+    "relaxjs": "^0.3.0"
   }
 }

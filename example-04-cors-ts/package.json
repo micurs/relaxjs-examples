@@ -4,7 +4,7 @@
   "description": "How to enable CORS with relaxjs",
   "main": "dist/server.js",
   "scripts": {
-    "start": "node dist/server.js | bunyan",
+    "start": "node dist/server.js --relaxjs-verbose | bunyan",
     "build": "tsc -p .",
     "client": "http-server -p 3000 -o http://localhost:3000/index.html"
   },
@@ -12,6 +12,6 @@
   "license": "MIT",
   "dependencies": {
     "http-server": "^0.8.5",
-    "relaxjs": "^0.2.5"
+    "relaxjs": "^0.3.0"
   }
 }
